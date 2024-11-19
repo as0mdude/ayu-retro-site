@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body {
+    background-color: #000000;
+    color: #4A4A4A;
+    font-family: "Comic Sans MS", cursive;
+    margin: 0;
+    background-image: url('bg.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;  /* This keeps the background fixed while scrolling */
+    min-height: 100vh;  /* Ensures the body takes up at least the full viewport height */
+    backdrop-filter: blur(3px);
+  }
+  
+
+  h4{
+    font-size: 10px;
+  }
+  .container {
+    width: 800px;
+    margin: 20px auto;
+    background-color: #F8F9FA;
+    border: 5px outset #D7EAFB;
+    padding: 20px;
+    opacity: 0.9;
+  }
+  
+  .header {
+    text-align: center;
+    background-color: #F8F9FA;
+    padding: 20px;
+    border: 3px ridge #D7EAFB;
+    margin-bottom: 20px;
+  }
+  
+  .navigation {
+    background-color: #F8F9FA;
+    padding: 10px;
+    border: 2px solid #D7EAFB;
+    margin-bottom: 20px;
+  }
+  
+  .navigation a {
+    color: #4A4A4A;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+  }
+  
+  .navigation a:hover {
+    color: #ff0000;
+    text-decoration: underline;
+  }
+  
+  .content {
+    display: table;
+    width: 100%;
+  }
+  
+  .main-content {
+    display: table-cell;
+    width: 70%;
+    background-color: #F8F9FA;
+    padding: 20px;
+    border: 2px inset #D7EAFB;
+  }
+  
+  .sidebar {
+    display: table-cell;
+    width: 30%;
+    background-color: #F8F9FA;
+    padding: 20px;
+    border: 2px inset #D7EAFB;
+  }
+  
+  .footer {
+    text-align: center;
+    background-color: #F8F9FA;
+    padding: 10px;
+    border: 2px groove #D7EAFB;
+    margin-top: 20px;
+  }
+  
+  .counter {
+    text-align: center;
+    font-family: "Courier New", monospace;
+    background-color: #000000;
+    color: #ff0000;
+    padding: 5px;
+    border: 2px inset #ff0000;
+    margin: 10px auto;
+    width: 100px;
+  }
+  
+  marquee {
+    background-color: #D7EAFB;
+    color: #4A4A4A;
+    padding: 5px;
+  }
+  
+  blink {
+    animation: blinker 1s linear infinite;
+  }
+  
+  @keyframes blinker {
+    50% { opacity: 0; }
+  }
+
+
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Welcome to Ayu's Site!</h1>
+      <img src="33327.jpg" alt="Under Construction" />
+    </div>
+    
+    <marquee>🐟I want Takoyaki🐟 </marquee>
+    
+    <div class="navigation">
+      <a href="#home">HOME</a> |
+      <a href="#about">ABOUT ME</a> |
+      <a href="#links">COOL LINKS</a> |
+      <a href="#guestbook">GUESTBOOK</a>
+    </div>
+    
+    <div class="content">
+      <div class="main-content">
+        <h2>❄️ About Me ❄️</h2>
+        <p>Welcome to my dream!</p>
+        <p><blink>❄️ My thoughts! ❄️</blink></p>
+        <ul>
+          <h4>I loved the changing seasons. Winter. A city of dancing snow. I loved dashing through the shopping district, leaving behind fresh footprints. Spring. A city of melted snow. I loved to pry away the small clumps of snow still remaining on the tree trunks with my hands. Summer. A city that has forgotten the cold of the snow. I loved gazing out at the misty streets from the gaps between the slanted umbrellas. Autumn. A city that foretells the arrival of the snow. I loved to look up at the clouds and catch the little white crystal that fell from them in the palm of my hands. And then, the season is Winter. The season of snow. The season where the city is all covered in white. I loved the changing seasons. But like a puddle frozen by the snow, time had stopped for me. Within this square room… Within a time without seasons… I’ve always been alone. Over and over again. Looking at the same scene inside a dream. Devoting myself to a night with no dawn… But… Slowly, the night begins to brighten.</h4>
+          
+        </ul>
+      </div>
+      
+      <div class="sidebar">
+        <h3>❄️Ayu's favorites❄️</h3>
+        <ul>
+          <li><a href="#">Angels</a></li>
+          <li><a href="#">Food</a></li>
+          <li><a href="#">Exploring</a></li>
+        </ul>
+        
+        <div class="counter">
+          Visitors:<br>
+          000042
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer">
+      <p>🌐 Best viewed on PC 🌐</p>
+      <p>Last updated: now</p>
+      <img src="ayuspinny.gif" alt="Under Construction" />
+      
+    </div>
+  </div>
+
+  <!--<div id="waifu">
+    <div id="waifu-message"></div>
+    <div class="waifu-tool">
+        <span class="icon-next"></span>
+        <span class="icon-home"></span>
+        <span class="icon-message"></span>
+        <span class="icon-camera"></span>
+        <span class="icon-volumeup"></span>
+        <span class="icon-volumedown"></span>
+        <span class="icon-about"></span>
+        <span class="icon-cross"></span>
+    </div>
+    <canvas id="live2d2"></canvas>
+    <canvas id="live2d4"></canvas>
+</div>
+<script src="dist/live2d_bundle.js"></script>
+<script async type="module" src="waifu-tips.js"></script>
+-->
+<audio id="audioPlayer" src="LittleFragments.mp3" preload="auto"></audio>
+
+  <script>
+    // Select the audio element
+    const audioPlayer = document.getElementById('audioPlayer');
+
+    // Add click event listener to the document
+    document.addEventListener('click', function() {
+      // Play the audio on click
+      audioPlayer.play();
+    });
+  </script>
+</body>
+</html>
